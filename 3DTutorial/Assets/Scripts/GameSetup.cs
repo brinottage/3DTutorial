@@ -21,7 +21,7 @@ public class GameSetup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ballRadius = ballPrefab.GetComponent<SphereCollider>().radius * 100;
+        ballRadius = ballPrefab.GetComponent<SphereCollider>().radius * 100f;
         ballDiameter = ballRadius + 2f;
         PlaceAllBalls();
     }
@@ -33,7 +33,7 @@ public class GameSetup : MonoBehaviour
 
     void PlaceCueBall(){
         GameObject ball = Instantiate(ballPrefab, cueBallPosition.position, Quaternion.identity);
-
+        ball.GetComponent<Ball>().MakeCueBall();
     }
 
     void PlaceEightBall(UnityEngine.Vector3 position){

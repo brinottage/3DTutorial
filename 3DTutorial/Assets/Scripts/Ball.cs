@@ -6,8 +6,8 @@ public class Ball : MonoBehaviour
 {
 
     private bool isRed;
-    private bool is8Ball = false;
-    private bool isCueBall = false;
+    public bool is8Ball = false;
+    public bool isCueBall = false;
 
     // Start is called before the first frame update
     void Start()
