@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         
         currentPlayer = CurrentPlayer.Player1;
+        restartButton.SetActive(false);
 
     }
 
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
         if (currentPlayer == CurrentPlayer.Player1){
             if (isWinningShotForPlayer1)
             {
-                ScratchOnWinningShot("Player1");
+                ScratchOnWinningShot("Player 1");
                 return true;
             }
         } 
@@ -131,6 +132,7 @@ public class GameManager : MonoBehaviour
                 }
             } else {
                 player2BallsRemaining--;
+                player2BallsText.text = "Player 2 Balls Remaining: " + player2BallsRemaining;
                 if (player2BallsRemaining <= 0) {
                     isWinningShotForPlayer2 = true;
                 }

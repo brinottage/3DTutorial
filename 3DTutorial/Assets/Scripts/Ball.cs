@@ -8,17 +8,18 @@ public class Ball : MonoBehaviour
     private bool isRed;
     public bool is8Ball = false;
     public bool isCueBall = false;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     public bool isBallRed(){
