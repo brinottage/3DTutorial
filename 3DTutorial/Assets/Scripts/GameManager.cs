@@ -8,6 +8,7 @@ using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
+using Vector3 = UnityEngine.Vector3;
 
 public class GameManager : MonoBehaviour
 {
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (isWaitingForBallMovementToStop && !isGameOver) {
 
             currentTimer -= Time.deltaTime;
@@ -133,7 +135,7 @@ public class GameManager : MonoBehaviour
     }
 
     void ScratchOnWinningShot(string player){
-        Lose(player + " Scratched on Their Final Shot an Has Lost");
+        Lose(player + " Scratched on Their Final Shot and Has Lost");
     }
 
     bool CheckBall(Ball ball){

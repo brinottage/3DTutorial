@@ -54,8 +54,8 @@ GameManager gameManager;
 
     public void ResetCamera(){
         cueStick.SetActive(true);
-        transform.position = cueBall.position + offset;
-        transform.LookAt(-cueBall.position);
+        //transform.position = cueBall.position + offset + new UnityEngine.Vector3(0, 60, 0);
+        transform.LookAt(cueBall.position);
         transform.localEulerAngles = new UnityEngine.Vector3(downAngle, transform.localEulerAngles.y, 0);
 
 
@@ -75,10 +75,11 @@ GameManager gameManager;
 
                     float powerValueNumber = ((savedMousePosition - 0) / (maxDrawDistance - 0)) * (100 - 0) + 0;
                     int powerValueInt = Mathf.RoundToInt(powerValueNumber);
-                    powerText.text = "Power: " + powerValueNumber.ToString() + "%";
+                    powerText.text = "Power: " + powerValueNumber + "%";
                 }
                 if (Input.GetButtonDown("Fire1"))
                 {
+                    
                     Vector3 hitDirection = transform.forward;
                     hitDirection = new Vector3(hitDirection.x, 0, hitDirection.z).normalized;
 
